@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks coffee Company</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="https://www.starbucks.in/assets/icon/logo.png" type="image/x-icon">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:SoDoSans_Bold,Helvetica,sans-serif;
+        }
+        .nav{
+            align-items: center;
+            background-color: bisque;
+            height: 70px;
+            position: sticky;
+            top:0px;
+            z-index:1;
+        }
+        img{
+            margin-left: 50px;
+            position: relative;
+            top: 10px;
+        }
+        .nav .links{
+           width: 1200px;
+        }
+        .nav .links ul{
+            display: flex;
+            margin-left: 120px;
+            justify-content: space-around;
+            list-style: none; 
+            position: relative;
+            bottom: 40px;
+            top: -30px;
+            font-family: sans-serif;
+        }
+        .nav .links ul a{
+            text-decoration: none;
+            color: black;
+        }
+        #a{
+            position: relative;
+            left: 140px;
+            top: 8px;
+            z-index: 1;
+        }
+        #b{
+            position: relative;
+            left: 30px;
+            border-radius: 50px;  
+            height: 30px;
+            width: 300px;
+            text-align: center;
+        }
+        #c{
+            position: relative;
+            left: 12px;
+            z-index: 1;
+            font-size: 22px;
+        }
+        .d1{
+            background-color: #1E3932;
+            color: white;
+            height: 80px;
+        }
+        .d1 button{
+            border-radius: 50px;
+            width: 100px;
+            height: 30px;
+            background-color: transparent;
+            color: white;
+            border-color: white;
+            margin-left: 1050px;
+            position: relative;
+            top: 5px;
+        }
+        .d1 h2{
+            margin-left: 80px;
+            position: relative;
+            top: 30px;
+            font-size: large;
+            
+        }
+        .d2{
+            margin-left: 80px;
+            position: relative;
+            top: 20px; 
+            color:#1E3932;
+        }
+        .d2 h1{
+            font-size: 24px;
+        }
+        .d3 .d4 img{
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+        .names{
+            display: flex;
+            justify-content: space-evenly;
+            position: relative;
+            top: 15px;
+        }
+        .order{
+            background-color: rgba(227, 80, 27, 0.865);
+            border-radius: 10px;
+            height: 250px;
+            width: 1100px;
+            margin-left: 75px;
+        }
+        .order img{
+            height: 220px;
+            width: 100px;
+            margin: 16px 0px 0px;
+        }
+        .order p{
+            position: relative;
+            bottom: 190px;
+            margin-left:140px;
+        }
+        .order h3{
+            margin-left: 140px;
+            position: relative;
+            bottom: 190px;
+        }
+        .order h5{
+            margin-left: 160px;
+            position: relative;
+            bottom: 190px;
+        }
+        .order h6{
+            margin-left: 160px;
+            position: relative;
+            bottom: 200px;
+        }
+        .order button{
+            margin-left: 900px;
+            position: relative;
+            bottom: 240px;
+            border-radius: 50px;
+            width: 170px;
+            height: 40px;
+            background-color: #007544;
+            color: white;
+            border: none;
+        }
+        #d{
+            margin-left: 80px;
+            position: relative;
+            top: 20px; 
+            font-size: 23px;
+            color:#1E3932;  
+        }
+        .cards{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .cards .card1{
+            padding: 10px;
+            width: 350px;
+            height: 380px;
+            font-size: 14px;
+            box-shadow: 1px 2px 3px;
+            border: 1px solid;
+            background-color:white;
+            border-radius: 10px;
+        }
+        .cards .card1 img{
+            width: 330px;
+            height: 200px;
+            margin: -5px;
+            position: relative;
+            top: -2px;
+        }
+        .cards .card2{
+            margin-left: 10px;
+            background-color:white;
+            width: 350px;
+            height: 380px;
+            border-radius: 10px;
+            overflow:hidden ;
+            box-shadow: 1px 2px 3px;
+            border: 1px solid;
+            font-size: 12px;
+            padding: 10px;
+        }
+        .cards .card2 img{
+            width: 350px;
+            height: 180px;
+            margin: -10px;
+            position: relative;
+            top:-10px;
+        }
+        .cards .card3{
+            margin-left: 10px;
+            position: relative;
+            background-color: white;
+            width: 350px;
+            height: 380px;
+            border-radius: 10px;
+            overflow:hidden ;
+            box-shadow: 1px 2px 3px;
+            border: 1px solid;
+            font-size: 12px;
+            padding: 10px;
+        }
+        .cards .card3 img{
+            width: 320px;
+            height: 170px;
+            margin: 0px 0px;
+            position: relative;
+            top: 0px;
+        }
+        .cards .card1 button{
+            background-color: #007544;
+            border-radius: 50px;
+            color: white;
+            height: 30px;
+            width: 80px;
+            border: none;
+            margin-left: 170px;
+        }
+        .card2 button{
+            background-color: #007544;
+            border-radius: 50px;
+            color: white;
+            height: 30px;
+            width: 80px;
+            border: none;
+            margin-left: 170px;
+        }
+        .cards .card3 button{
+            background-color: #007544;
+            border-radius: 50px;
+            color: white;
+            height: 30px;
+            width: 80px;
+            border: none;
+            margin-left: 170px;
+        }
+        #e{
+            margin-left: 60px;
+            font-weight: bolder;
+            position: relative;
+            top: 50px; 
+            font-size: 24px;
+        }
+        .cards2{
+            display: flex;
+            justify-content: space-evenly;
+            background-color: #EDEBE9;
+            height: 350px;
+            align-items: center;
+        }
+        .cards2 .card11{
+            padding: 5px;
+            width: 350px;
+            height: 150px;
+            font-size: 14px;
+            box-shadow: 1px 2px 3px;
+            border: 1px solid;
+            background-color:white;
+            border-radius: 10px;
+        }
+        .cards2 .card11 img{
+            width: 80px;
+            height: 80px;
+            border-radius: 10px;
+            margin-left: 10px;
+        }
+        .cards2 .card12{
+            padding: 5px;
+            width: 350px;
+            height: 150px;
+            font-size: 14px;
+            box-shadow: 1px 2px 3px;
+            border: 1px solid;
+            background-color:white;
+            border-radius: 10px;
+        }
+        .cards2 .card12 img{
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            margin-left: 10px;
+
+        }
+        .cards2 .card13{
+            padding: 5px;
+            width: 350px;
+            height: 150px;
+            font-size: 14px;
+            box-shadow: 1px 2px 3px;
+            border: 1px solid;
+            background-color:white;
+            border-radius: 10px;
+        }
+        .cards2 .card13 img{
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            margin-left: 10px;
+        }
+        .cards2 .card11 button{
+            background-color: #007544;
+            border-radius: 50px;
+            color: white;
+            height: 30px;
+            width: 80px;
+            border: none;
+            margin-left: 170px;
+        }
+        .cards2 .card12 button{
+            background-color: #007544;
+            border-radius: 50px;
+            color: white;
+            height: 30px;
+            width: 80px;
+            border: none;
+            margin-left: 170px;
+        }
+        .cards2 .card13 button{
+            background-color: #007544;
+            border-radius: 50px;
+            color: white;
+            height: 30px;
+            width: 80px;
+            border: none;
+            margin-left: 170px;
+        }
+        .cards2 h2{
+            font-size: 14px;
+            margin-left: 110px;
+            position: relative;
+            bottom: 60px;
+        }
+        .cards2 strong{
+            margin-left: 20px;
+        }
+        .more{
+            background-color: #EDEBE9;
+            height: 650px;
+        }
+        .more img{
+            margin-left: 120px;
+            border-radius: 10px;
+
+        }
+        .more h1{
+            color: white;
+            margin-left: 140px;
+            position: relative;
+            bottom: 250px;
+        }
+        .more h6{
+            color: white;
+            margin-left: 140px;
+            position: relative;
+            bottom: 250px;
+            font-size: 14px;
+        }
+        #f{
+            background-color: white;
+            color: black;
+            border-radius: 50px;
+            border: none;
+            height: 32px;
+            width: 200px;
+            margin-left: 150px;
+            position: relative;
+            bottom: 140px;
+        }
+        #g{
+            background-color: white;
+             color: #08a571;
+             font-size: 14px;
+             border: none;
+             border-radius: 4px;
+             padding: 4px 4px;
+             margin-left:-212px ;
+             position: relative;
+             bottom: 550px;
+             font-weight: bold;
+        }
+        .footer{
+            background-color: #1E3932;
+            color: white;
+            display: flex;
+            height: 400px;
+            justify-content:space-between;
+            padding-top: 50px;
+        }
+        .f2 a{
+            color: white;
+            text-decoration: none;
+        }
+        .f3 a{
+            color: white;
+            text-decoration: none;
+        }
+        .f4 a{
+            color: white;
+            text-decoration: none;
+        }
+        .f5 a{
+            color: white;
+            text-decoration: none;
+        }
+     
+        .f7{
+            background-color: #1E3932;
+            color: white;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <div class="logo">
+            <img src="https://www.starbucks.in/assets/icon/logo.png" alt="" width="50px">
+        </div>
+        <div class="links">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Gift</a></li>
+                <li><a href="">Order</a></li>
+                <li><a href="">Pay</a></li>
+                <li><a href="">Store</a></li>
+                <i class="fa-solid fa-magnifying-glass" id="a"></i>
+                <input type="text" placeholder="Looking for Something Specific?" id="b">
+                <i class="fa-regular fa-user" id="c"></i>
+            </ul>
+        </div>
+        </div>
+        <div class="d1">
+            <h2>Avail benefits.! Sign up for My Starbucks Rewards</h2>
+            <button>Know More</button>
+        </div>
+        <div class="d2">
+            <h1><strong>Handcrafted Curations</strong></h1><br><br>
+        </div>
+        <div class="d3">
+            <div class="d4">
+                <img src="https://starbucks-cdn-01.s3.ap-south-1.amazonaws.com/Category/Small/Bestseller.jpg" alt="">
+                <img src="https://starbucks-cdn-01.s3.ap-south-1.amazonaws.com/Category/Small/Drinks.jpg" alt="">
+                <img src="https://starbucks-cdn-01.s3.ap-south-1.amazonaws.com/Category/Small/Food.jpg" alt="">
+                <img src="https://starbucks-cdn-01.s3.ap-south-1.amazonaws.com/Category/Small/Merchandise.jpg" alt="">
+                <img src="https://starbucks-cdn-01.s3.ap-south-1.amazonaws.com/Category/Small/CoffeeAtHome.jpg" alt="">
+                <img src="https://starbucks-cdn-01.s3.ap-south-1.amazonaws.com/Category/Small/ReadyToEat.jpg" alt="">
+            <div class="names">
+                 <h4 style="position: relative; right: 30px;">Bestseller</h4>
+                 <h4 style="position: relative; right: 5px;">Drinks</h4>
+                 <h4 style="position: relative; left: 45px;">Food</h4>
+                 <h4 style="position: relative; left: 66px;">Merchandise</h4>
+                 <h4 style="position: relative; left: 50px;">Coffee At Home</h4>
+                 <h4 style="position: relative; left: 40px;">Ready to Eat</h4>
+            </div>
+            <br><br><br><br><br><br><br>
+        </div>
+        <div class="order">
+            <img src="https://preprodtsbstorage.blob.core.windows.net/cms/uploads/7_2_6f41fae88f.png" alt="" >
+            <p>The Beloved Comeback Of</p><br>
+            <h3>Pumpkin Spice Menu</h3><br>
+            <p>Experience the essence of autumn with our best-selling star, now available as Frappuccino, Latte, and Nitro Brew!</p><br><br><br>
+            <h6>Strating From</h6>
+            <h5><strong>₹ 400.00</strong></h5>
+            <button>Order Now</button>
+        </div>
+        <br>
+        <p id="d"><strong>Latest Offerings</strong></p>
+        <br>
+        <br>
+        <br>
+        <div class="cards">
+            <div class="card1">
+                <img src="https://starbucks-cdn-01.s3.ap-south-1.amazonaws.com/Items/Large/webP/102253.webp" alt="" width="380px " height="190px">
+                <h2 style="font-size: 20px;">Pumpkin Spic Latter</h2>
+                <h6 style="font-size: 10px;font-weight: lighter;">SHORT (237ML)</h6>
+                <br>
+                <p><h5 style="font-weight: lighter; font-size: 11px;">Our signature espresso and steamed milk with the celebrated flavor combination of pumpkin, cinnamon, nutmeg and clove. Topped with whipped cream and Pumpkin Spice topping.Allergens-Milk</h5></p> <br>
+                <strong>₹ 414.14</strong>
+                <button>Add Item</button>
+            </div>
+            <div class="card2">
+                <img src="https://starbucks-cdn-01.s3.ap-south-1.amazonaws.com/Items/Large/webP/102257.webp" alt="" width="348px " height="167px"><br><br><br>
+                <h2 style="font-size: 20px;">Iced Pumpkin Spic Latte</h2>
+                <h6 style="font-size: 10px;font-weight: lighter;">TALL(Iced Tall Pumpkin Spic Latte)</h6><br>
+                <p>Our signature espresso and milk with the celebrated flavor combination of pumpkin, cinnamon, nutmeg and clove served over ice. Topped with whipped cream and Pumpkin Spice topping.Allergens-Milk</p><br>
+                <strong style="margin: 5px; font-size: 14px;">₹ 456.56</strong>
+                <button>Add Item</button>
+            </div>
+            <div class="card3">
+                <img src="https://starbucks-cdn-01.s3.ap-south-1.amazonaws.com/Items/Large/webP/102260.webp" alt="" width="348px" height="167px"><br><br><br>
+                <h2 style="font-size: 20px;">Pumpkin Spice Frappuccino</h2>
+                <h6 style="font-size: 10px;font-weight: lighter;">TALL(Tall Pumpkin Spice Frappuccino)</h6><br>
+                <p>Coffee and milk blended with the celebrated flavor combination of pumpkin, cinnamon, nutmeg and clove served over ice. Topped with whipped cream and Pumpkin Spice topping.Allergens-Milk.</p><br>
+                <strong style="font-size: 14px;">₹ 483.00</strong>
+                <button>Add Item</button>
+            </div>
+        </div>
+        </div>
+        <br><br><br>
+        <h1 id="e" >Barista Recommends</h1>
+    <div class="cards2"> 
+        <div class="card11">
+             <img src="https://starbucks-cdn-01.s3.ap-south-1.amazonaws.com/Items/Large/webP/112595.webp" alt="" >
+             <h2>Hazelnut Triangle</h2>
+             <strong>₹ 206.6</strong>
+             <button>Add Item</button>
+        </div>
+        <div class="card12">
+            <img src="https://starbucks-cdn-01.s3.ap-south-1.amazonaws.com/Items/Large/webP/112601.webp" alt="" >
+            <h2>Bhuna chicken puff</h2>
+            <strong>₹ 199.50</strong>
+            <button>Add Item</button>
+        </div>
+        <div class="card13">
+            <img src="https://starbucks-cdn-01.s3.ap-south-1.amazonaws.com/Items/Large/webP/113008.webp" alt="" >
+            <h2>Chocolate Brownie Cupcake</h2>
+            <strong>₹ 299.06</strong>
+            <button>Add Item</button>
+        </div>
+    </div>
+    <br><br><br>
+    <div class="more"><br>
+        <h2 style="margin:0px 50px;">Learn more about the world of coffee!</h2><br><br>
+        <img src="https://preprodtsbstorage.blob.core.windows.net/cms/uploads/C_A_F_E_BLOG_WEB_5e2635de8d.jpg" alt="" width="1000" height="500px">
+        <h1>Coffe With A Conscience </h1><br>
+        <h6>With quality and transparency at its core, the Starbucks' C.A.F.E Program is brewing a sustainable coffe culture</h6>
+        <button id="f">Learn More</button>
+        <button id="g">Coffe culture</button>
+    </div>
+    <div class="footer">
+        <div class="f1">
+            <img src="https://www.starbucks.in/assets/icon/logo.png" alt="">
+        </div>
+        <div class="f2">
+            <h2>About us</h2><br>
+            <a href="">Our Heritage</a><br><br>
+            <a href="">Coffe House</a><br><br>
+            <a href="">Our Company</a><br>
+        </div>
+        <div class="f3">
+            <h2>Responsibility</h2><br>
+            <a href="">Community</a><br><br>
+            <a href="">Ethical Sourcing</a><br><br>
+            <a href="">Environment</a><br><br>
+            <a href="">Diversity</a>
+        </div>
+        <div class="f4">
+            <h2>Quick Links</h2><br>
+            <a href="">Privacy Policy</a><br><br>
+            <a href="">Starbucks Rewards Day Offer</a> <br><br>
+            <a href="">Delivery</a><br><br>
+            <a href="">Season's Gifting</a><br><br>
+            <a href="">Careers</a><br><br>
+            <a href="">Customer Service</a><br><br>
+            <a href="">FAQs</a><br><br>
+            <a href="">Offer for Beverage<br>Subscription at Starbucks.</a><br><br>
+        </div>
+        <div class="f5">
+            <h2>SOCIAL MEDIA</h2><br>
+            <i style="padding: 10px; font-size: 20px;" class="fa-brands fa-instagram"></i>
+            <i style="padding: 10px; font-size: 20px;"  class="fa-brands fa-twitter"></i>
+            <i style="padding: 10px; font-size: 20px;"  class="fa-brands fa-linkedin"></i>
+            <i style="padding: 10px; font-size: 20px;" class="fa-brands fa-facebook"></i>
+        </div>
+        <div class="f6">
+            <img src="https://www.starbucks.in/assets/images/appstoreiOS.png" alt=""><br>
+            <img src="https://www.starbucks.in/assets/images/appstoreAndroid.png" alt="">
+        </div>
+    </div>
+    <div class="f7">
+        <h6>___________________________________________________________________________________________________________________________________________________________________________________________________________________</h6><br>
+        <p style="margin-left: 15px;">Web Accesibility | Privacy Statement | Terms of Use | Contact Us</p><br>
+        <p style="margin-left: 800px; position: relative; bottom: 40px;" >© 2023 Starbucks Coffee Company. All rights reserved.</p>
+    </div>
+    </div>
+</body>
+</html>
